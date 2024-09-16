@@ -6,9 +6,29 @@ import './App.css';
 function App() {
   const [count, setCount] = useState(0);
 
+  const data = [{
+    name:"Jishnu",
+    age:25,
+    gender:"Male"
+  },{
+    name:"Jithin",
+    age:27,
+    gender:"Male"
+  },{
+    name:"Anjali",
+    age:24,
+    gender:"Female"      
+  }]
+
   return (
     <>
-      <div>Hey there</div>
+      {data.map((item,i)=>{ 
+        return <div key={i}>
+          <h1>{item.name}</h1>
+          <p>{item.age}</p>
+          <p>{item.gender}</p>
+        </div>
+      })}
     </>
   );
 }
